@@ -2,22 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   color-scheme: light dark;
 }
 
-
-body {
-
-  font-family: 'Comfortaa Variable', system-ui;
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  background-color: #050505;
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  font-family: 'Comfortaa Variable', system-ui;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Esto es para que el scroll sea suave */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
 
 .important-color {
   color: #27EEF5;

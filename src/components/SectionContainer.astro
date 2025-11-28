@@ -1,14 +1,19 @@
 ---
 interface Props {
+  id: string;
   title: string;
-  py?: string;
 }
 
-const { title, py } = Astro.props;
+const { id, title } = Astro.props;
 ---
 
-<section class={`w-full mx-auto lg:w-[740px] ${py ? py : ""}`}>
-  <h2 class="text-5xl font-bold flex flex-row justify-center gap-x-4 mb-4">
+<section id={id} class={`w-full mx-auto lg:w-[740px] py-32`}>
+  <h2
+    class="font-bold
+  text-3xl lg:text-5xl md:text-4xl
+  flex flex-row justify-center
+  gap-x-4 mb-4"
+  >
     {title}
   </h2>
   <slot />
