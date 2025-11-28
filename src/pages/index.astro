@@ -1,14 +1,40 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Github from "../icons/Github.astro";
+import Mail from "../icons/Mail.astro";
+import SocialPill from "../icons/SocialPill.astro";
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
 ---
 
-<Layout>
-	<main>
-		<h1>porfilio</h1>
-	</main>
-	
+<Layout
+  title="Ingeniero en sistemas y desarrollador de software"
+  description=""
+>
+  <main>
+    <SectionContainer title="Hola! soy José González" py="py-44">
+      <p class="text-xl opacity-80 text-wrap mt-2">
+        <span class="font-bold text-color-purple">Ingeniero en sistemas</span> con
+        conocimientos en desarrollo de software y bases de datos. Mi objetivo es
+        aportar al crecimiento tecnológico de la empresa mediante el desarrollo de
+        soluciones eficientes, seguras y bien estructuradas.
+      </p>
+
+      <nav class="flex gap-x-2 mt-4">
+        <SocialPill href="https://github.com/josegonzalez123">
+          <Github class="w-6 h-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="https://github.com/josegonzalez123">
+          <Mail class="w-6 h-6" />
+          Email
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer title="Experiencia" py="pb-44">
+      <Experience />
+    </SectionContainer>
+  </main>
 </Layout>

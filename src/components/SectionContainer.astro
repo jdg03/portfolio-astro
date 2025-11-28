@@ -1,0 +1,15 @@
+---
+interface Props {
+  title: string;
+  py?: string;
+}
+
+const { title, py } = Astro.props;
+---
+
+<section class={`w-full mx-auto lg:w-[740px] ${py ? py : ""}`}>
+  <h2 class="text-5xl font-bold flex flex-row justify-center gap-x-4 mb-4">
+    {title}
+  </h2>
+  <slot />
+</section>
