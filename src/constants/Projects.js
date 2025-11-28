@@ -15,8 +15,7 @@ export const projects = [
   {
     id: 2,
     title: "Sistema de Matrícula",
-    image:
-      "https://ucdtitavxeziqrjktxie.supabase.co/storage/v1/object/public/images-portfolio/projects/registrationSystem/imagen1.png",
+    image: "/projects/matricula1.webp",
     description:
       "Sistema de de matrícula para llevar el control de los estudiantes y expedientes estudiantiles.",
     github: "https://github.com/jdg03/educaTodos",
@@ -26,8 +25,7 @@ export const projects = [
   {
     id: 3,
     title: "Blog informativo",
-    image:
-      "https://ucdtitavxeziqrjktxie.supabase.co/storage/v1/object/public/images-portfolio/projects/informativeblog/imagen2.png",
+    image: "/projects/blog1.webp",
     description:
       "Blog informativo para un bufete de abogados y panel administrativo para gestionar las entradas.",
     github: "https://github.com/jdg03/angular-blog-app",
