@@ -1,33 +1,62 @@
 ---
-import { CERTIFICATIONS } from "../constants/Certifications.js";
-import LinkButton from "./LinkButton.astro";
+import { CERTIFICATIONS } from "../constants/Certifications";
 import Link from "../icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
 ---
 
-<div class="flex flex-col gap-y-16 mt-8">
+<p class="text-center text-lg font-extralight leading-8 text-gray-400">
+  Certificados que han contribuido a mi crecimiento profesional
+</p>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
   {
-    CERTIFICATIONS.map(({ image, title, description, academy, link }) => (
-      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-        <div class="w-full md:w-1/2">
-          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+    CERTIFICATIONS.map(
+      ({ title, academy, description, link, image }, index) => (
+        <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 flex flex-col">
+          <a href={link} target="_blank" rel="noopener noreferrer">
             <img
-              alt={`Certificación ${title}`}
-              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-              loading="lazy"
+              class="rounded-t-lg w-full h-48 object-cover"
               src={image}
+              alt={`Certificación ${title}`}
+              loading="lazy"
             />
-          </div>
-        </div>
-
-        <div class="w-full md:w-1/2 md:max-w-lg">
-          <h3 class="text-2xl font-bold important-color opacity-80">{title}</h3>
-
-          <p class="text-lg text-purple-400 mt-1 font-medium">{academy}</p>
-
-          <div class="flex flex-col mt-4">
-            <div class="text-gray-700 dark:text-gray-400">{description}</div>
-
-            <div class="mt-4">
+          </a>
+          <div class="p-5 flex flex-col flex-grow">
+            <div class="flex-grow">
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white  transition-colors">
+                  {title}
+                </h5>
+              </a>
+              <p class="important-color opacity-80 font-semibold mb-3">
+                {academy}
+              </p>
+              <div class="mb-3">
+                <p
+                  id={`description-${index}`}
+                  class="text-sm text-gray-700 dark:text-gray-400 line-clamp-3"
+                >
+                  {description}
+                </p>
+                <button
+                  id={`toggle-${index}`}
+                  class="text-sm important-color opacity-80 hover:underline mt-1"
+                  onclick={`
+                  const desc = document.getElementById('description-${index}');
+                  const btn = document.getElementById('toggle-${index}');
+                  if (desc.classList.contains('line-clamp-3')) {
+                    desc.classList.remove('line-clamp-3');
+                    btn.textContent = 'Leer menos';
+                  } else {
+                    desc.classList.add('line-clamp-3');
+                    btn.textContent = 'Leer más';
+                  }
+                `}
+                >
+                  Leer más
+                </button>
+              </div>
+            </div>
+            <div class="mt-1">
               {link && (
                 <LinkButton href={link}>
                   <Link class="size-4" />
@@ -37,7 +66,7 @@ import Link from "../icons/Link.astro";
             </div>
           </div>
         </div>
-      </article>
-    ))
+      )
+    )
   }
 </div>
