@@ -27,7 +27,7 @@ export const projects = [
     title: "Blog informativo",
     image: "/projects/blog1.webp",
     description:
-      "Blog informativo para un bufete de abogados y panel administrativo para gestionar las entradas.",
+      "Blog informativo para un bufete de abogados donde los clientes pueden buscar información sobre tramites legales y panel administrativo para gestionar las entradas.",
     github: "https://github.com/jdg03/angular-blog-app",
     technologies: [TAGS.ANGULAR, TAGS.TAILWIND, TAGS.FIREBASE],
     is_active: true,
