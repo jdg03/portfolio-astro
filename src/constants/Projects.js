@@ -52,7 +52,7 @@ export const projects = [
     description:
       "Arquitectura del backend de un ecommerce wep, siguiendo patrones de clean arquitecture, CQRS, Mediator, Fluent Validation y autenticación con identity y JWT.",
     github: "https://github.com/jdg03/aspnet-core-react-ecommerce",
-    technologies: [TAGS.SQLSERVER, TAGS.CSHARP, TAGS.JWT],
+    technologies: [TAGS.SQLSERVER, TAGS.NET, TAGS.JWT],
     is_active: true,
   },
 ];

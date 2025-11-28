@@ -16,6 +16,7 @@ import PythonIcon from "../icons/languajes/Python.astro";
 import SqlServerIcon from "../icons/databases/SqlServer.astro";
 import TensorFlowIcon from "../icons/TensorFlow.astro";
 import JwtIcon from "../icons/Jwt.astro";
+import NetIcon from "../icons/backend/Net.astro";
 
 // Mapeo de strings a componentes
 const ICONS = {
@@ -31,10 +32,14 @@ const ICONS = {
   CSharp: CSharpIcon,
   TensorFlow: TensorFlowIcon,
   Jwt: JwtIcon,
+  Net: NetIcon,
 };
 ---
 
 <div class="flex flex-col gap-y-16 mt-8">
+  <p class="text-center text-lg font-extralight leading-8 text-gray-400">
+    Algunos de mis proyectos
+  </p>
   {
     projects.map(
       ({ image, title, description, technologies, link, github }) => (
@@ -51,7 +56,7 @@ const ICONS = {
           </div>
 
           <div class="w-full md:w-1/2 md:max-w-lg">
-            <h3 class="text-2xl font-bold text-gray-100 dark:text-gray-100">
+            <h3 class="text-2xl font-bold important-color opacity-80">
               {title}
             </h3>
             <div class="flex flex-col mt-2">

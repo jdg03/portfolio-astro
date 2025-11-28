@@ -59,4 +59,9 @@ export const TAGS = {
     class: "bg-[#7d7d7d] text-white",
     icon: "Jwt",
   },
+  NET: {
+    name: "NET",
+    class: "bg-[#7c2796] text-white",
+    icon: "Net",
+  },
 };
