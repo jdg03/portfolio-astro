@@ -25,7 +25,7 @@ const ICONS = {
   React: ReactIcon,
   Angular: AngularIcon,
   Firebase: FirebaseIcon,
-  NodeJS: NodeJSIcon,
+  NodeJs: NodeJSIcon,
   Supabase: SupabaseIcon,
   Python: PythonIcon,
   SqlServer: SqlServerIcon,
@@ -36,10 +36,12 @@ const ICONS = {
 };
 ---
 
+<p
+  class="text-center text-lg font-extralight leading-8 dark:text-gray-400 text-gray-600"
+>
+  Algunos de mis proyectos
+</p>
 <div class="flex flex-col gap-y-16 mt-8">
-  <p class="text-center text-lg font-extralight leading-8 text-gray-400">
-    Algunos de mis proyectos
-  </p>
   {
     projects.map(
       ({ image, title, description, technologies, link, github }) => (
@@ -53,13 +55,16 @@ const ICONS = {
     lg:border lg:border-gray-800 lg:hover:border-gray-700 
     lg:hover:bg-gray-800/50"
             >
-              <img
-                alt={`imagen del proyecto ${title}`}
-                class="object-cover object-top w-full h-56 transition duration-500 
-             sm:h-full md:scale-110 md:group-hover:scale-105"
-                loading="lazy"
-                src={image}
-              />
+              <div class="w-full h-48 sm:h-44 md:h-48 overflow-hidden">
+                <img
+                  alt={`imagen del proyecto ${title}`}
+                  class="object-cover object-top w-full h-full
+           transition duration-500 
+           md:scale-110 md:group-hover:scale-105"
+                  loading="lazy"
+                  src={image}
+                />
+              </div>
 
               {/* Ícono GitHub arriba a la derecha */}
               {github && (
@@ -93,7 +98,7 @@ const ICONS = {
                 })}
               </ul>
 
-              <div class="mt-2 text-gray-700 dark:text-gray-400">
+              <div class="mt-2 dark:text-gray-400 text-gray-600">
                 {description}
               </div>
             </div>

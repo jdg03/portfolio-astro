@@ -4,7 +4,9 @@ import Link from "../icons/Link.astro";
 import LinkButton from "./LinkButton.astro";
 ---
 
-<p class="text-center text-lg font-extralight leading-8 text-gray-400">
+<p
+  class="text-center text-lg font-extralight leading-8 dark:text-gray-400 text-gray-600"
+>
   Certificados que han contribuido a mi crecimiento profesional
 </p>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
@@ -59,12 +61,17 @@ import LinkButton from "./LinkButton.astro";
               </div>
               */}
             </div>
-            <div class="mt-1">
+            <div class="important-color mt-1 flex flex-row gap-x-2">
               {link && (
-                <LinkButton href={link}>
-                  <Link class="size-4" />
+                <Link class="size-4" />
+                <a
+                  class="opacity-90 hover:underline"
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Ver certificado
-                </LinkButton>
+                </a>
               )}
             </div>
           </div>
