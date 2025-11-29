@@ -7,17 +7,14 @@ interface Props {
 const { id, title } = Astro.props;
 ---
 
-<section
-  id={id}
-  class="scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl py-20"
->
+<section id={id} class="scroll-m-20 w-full mx-auto max-w-4xl px-4 py-20">
   <h2
     class="text-black opacity-80 dark:text-white dark:opacity-90 font-bold
     text-3xl lg:text-5xl md:text-4xl
-    flex flex-row justify-center
-    gap-x-4"
+    flex justify-center gap-x-4"
   >
     {title}
   </h2>
+
   <slot />
 </section>
