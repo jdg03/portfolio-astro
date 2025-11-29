@@ -1,56 +1,18 @@
 ---
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
-import Github from "../icons/Github.astro";
-import Mail from "../icons/Mail.astro";
-import SocialPill from "../components/SocialPill.astro";
+
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
 import Projects from "../components/Projects.astro";
 import Technologies from "../components/Technologies.astro";
 import Certificates from "../components/Certificates.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout title="Portfolio-JoseGonzalez" description="">
   <main class="px-4">
-    <section class={`w-full mx-auto lg:w-[740px] py-44`}>
-      <h2
-        class="text-black dark:text-white font-bold
-  text-3xl lg:text-5xl md:text-4xl
-  flex flex-row justify-center
-  gap-x-4"
-      >
-        Hola! soy José González
-      </h2>
-      <p
-        class="text-black opacity-80 dark:text-white dark:opacity-90 text-xl lg:text-xl
-      text-wrap mt-2"
-      >
-        <span class="font-bold important-color">Ingeniero en sistemas</span> con
-        conocimientos en desarrollo de software y bases de datos. Mi objetivo es
-        aportar al crecimiento tecnológico de la empresa mediante el desarrollo de
-        soluciones eficientes, seguras y bien estructuradas.
-      </p>
-
-      <nav
-        class="flex flex-wrap gap-4 mt-4 text-black opacity-80 dark:text-white dark:opacity-90"
-      >
-        <SocialPill href="https://github.com/jdg03">
-          <Github class="size-4 md:size-6" />
-          <span class="text-black opacity-80 dark:text-white dark:opacity-90"
-            >GitHub</span
-          >
-        </SocialPill>
-        <SocialPill
-          href="mailto:gonzalez5.jose52@gmail.com?subject=Contacto desde Portfolio&body=Hola José, me interesa contactarte..."
-        >
-          <Mail class="size-4 md:size-6" />
-          <span class="text-black opacity-80 dark:text-white dark:opacity-90"
-            >Email</span
-          >
-        </SocialPill>
-      </nav>
-    </section>
+    <Hero />
 
     <SectionContainer id="experiencia" title="Experiencia">
       <Experience />

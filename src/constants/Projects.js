@@ -10,7 +10,7 @@ export const projects = [
       "Plataforma web para gestionar los productos de un taller, seguimiendo de compras y ventas, y dashboard interactivo como soporte para la toma de decisiones.",
     github: "https://github.com/amos18g/taller",
     technologies: [TAGS.NEXT, TAGS.TAILWIND, TAGS.SUPABASE],
-    is_active: true,
+    is_active: false,
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const projects = [
       "Sistema de de matrícula para llevar el control de los estudiantes y expedientes estudiantiles.",
     github: "https://github.com/jdg03/educaTodos",
     technologies: [TAGS.SQLSERVER, TAGS.NODEJS, TAGS.REACT, TAGS.TAILWIND],
-    is_active: true,
+    is_active: false,
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const projects = [
       "Blog informativo para un bufete de abogados donde los clientes pueden buscar información sobre tramites legales junto con panel administrativo para gestionar las entradas.",
     github: "https://github.com/jdg03/angular-blog-app",
     technologies: [TAGS.ANGULAR, TAGS.TAILWIND, TAGS.FIREBASE],
-    is_active: true,
+    is_active: false,
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ export const projects = [
     github:
       "https://github.com/jdg03/python_tensorFlow_letterDetectorSignLanguage",
     technologies: [TAGS.PYTHON, TAGS.TENSORFLOW],
-    is_active: true,
+    is_active: false,
   },
   {
     id: 5,
@@ -53,7 +53,7 @@ export const projects = [
       "Arquitectura del backend de un ecommerce wep, siguiendo patrones de clean arquitecture, CQRS, Mediator, Fluent Validation y autenticación con identity y JWT.",
     github: "https://github.com/jdg03/aspnet-core-react-ecommerce",
     technologies: [TAGS.SQLSERVER, TAGS.NET, TAGS.JWT],
-    is_active: true,
+    is_active: false,
   },
   {
     id: 6,
@@ -61,8 +61,9 @@ export const projects = [
     image: "/projects/porfolio.webp",
     description:
       "Portafolio web con animaciones 3d usando liberias como motion y three.js",
-    github: "https://portfolio-jose-gonzalez.vercel.app/",
+    github: "",
     technologies: [TAGS.REACT, TAGS.TAILWIND],
+    link: "https://portfolio-jose-gonzalez.vercel.app/",
     is_active: true,
   },
 ];
