@@ -60,7 +60,7 @@ export const projects = [
     title: "Portafolio con animaciones 3d",
     image: "/projects/porfolio.webp",
     description:
-      "Portafolio web con animaciones 3d usando liberias como motion y three.js",
+      "Portafolio web con animaciones 3d usando librerias como motion y three.js",
     github: "",
     technologies: [TAGS.REACT, TAGS.TAILWIND],
     link: "https://portfolio-jose-gonzalez.vercel.app/",
