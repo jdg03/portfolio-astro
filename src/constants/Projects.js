@@ -55,4 +55,14 @@ export const projects = [
     technologies: [TAGS.SQLSERVER, TAGS.NET, TAGS.JWT],
     is_active: true,
   },
+  {
+    id: 6,
+    title: "Portafolio con animaciones 3d",
+    image: "/projects/porfolio.webp",
+    description:
+      "Portafolio web con animaciones 3d usando liberias como motion y three.js",
+    github: "https://portfolio-jose-gonzalez.vercel.app/",
+    technologies: [TAGS.REACT, TAGS.TAILWIND],
+    is_active: true,
+  },
 ];
