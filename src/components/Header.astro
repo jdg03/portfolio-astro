@@ -10,13 +10,13 @@ const links = [
 ---
 
 <header
-  class="fixed top-0 z-10 flex items-center justify-center w-full xl:w-[1120px] mx-auto mt-2"
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav class="flex flex-row gap-x-10 opacity-90 text-black dark:text-white">
     {
       links.map((link) => (
         <a
-          class="hover:text-[#27EEF5] opacity-80 dark:hover:text-[#27EEF5] transition-colors "
+          class="hover:text-[#27EEF5] opacity-80 dark:hover:text-[rgb(14 165 233)] transition-colors "
           href={link.href}
         >
           {link.label}

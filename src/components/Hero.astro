@@ -4,23 +4,33 @@ import Mail from "../icons/Mail.astro";
 import SocialPill from "../components/SocialPill.astro";
 ---
 
-<section class={`w-full mx-auto lg:w-[740px] py-44`}>
+<section
+  class={`scroll-m-20 w-full mx-auto container lg:max-w-4xl md:max-w-2xl py-48`}
+>
   <h2
     class="text-black dark:text-white font-bold
   text-3xl lg:text-5xl md:text-4xl
-  flex flex-row justify-center
+  flex flex-row justify-start
   gap-x-4"
   >
-    Hola! soy José González
+    <span class="wave-text">
+      {
+        "Hola! soy José González".split("").map((char, i) => (
+          <span class="inline-block" style={`animation-delay: ${i * 0.05}s`}>
+            {char === " " ? "\u00A0" : char}
+          </span>
+        ))
+      }
+    </span>
   </h2>
   <p
     class="text-black opacity-80 dark:text-white dark:opacity-90 text-xl lg:text-xl
-      text-wrap mt-2"
+      text-wrap mt-8"
   >
-    <span class="font-bold important-color">Ingeniero en sistemas</span> con conocimientos
-    en desarrollo de software y bases de datos. Mi objetivo es aportar al crecimiento
-    tecnológico de la empresa mediante el desarrollo de soluciones eficientes, seguras
-    y bien estructuradas.
+    <span class="font-bold important-color-light">Ingeniero en sistemas</span> con
+    conocimientos en desarrollo de software y bases de datos. Mi objetivo es aportar
+    al crecimiento tecnológico de la empresa mediante el desarrollo de soluciones
+    eficientes, seguras y bien estructuradas.
   </p>
 
   <nav
@@ -42,3 +52,19 @@ import SocialPill from "../components/SocialPill.astro";
     </SocialPill>
   </nav>
 </section>
+
+<style>
+  .wave-text span {
+    animation: wave 1.5s ease-in-out infinite;
+  }
+
+  @keyframes wave {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+</style>
