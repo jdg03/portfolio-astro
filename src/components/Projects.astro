@@ -77,7 +77,7 @@ const ICONS = {
               {/* Ícono GitHub arriba a la derecha */}
               {github && (
                 <div class="absolute top-2 right-2">
-                  <LinkButton href={github}>
+                  <LinkButton href={github} title={title}>
                     <GitHub class="size-6" />
                   </LinkButton>
                 </div>
@@ -92,7 +92,7 @@ const ICONS = {
             <div class="flex flex-col mt-2">
               <ul class="flex flex-row flex-wrap mb-2 gap-x-2 gap-y-2">
                 {technologies.map((tag) => {
-                  const Icon = ICONS[tag.icon]; // Obtener el componente del mapeo
+                  const Icon = ICONS[tag.icon];
                   return (
                     <li>
                       <span

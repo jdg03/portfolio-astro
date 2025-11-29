@@ -1,10 +1,11 @@
 ---
-const { href } = Astro.props;
+const { href, title } = Astro.props;
 ---
 
 <a
   target="_blank"
   href={href}
+  aria-label={`Ver código en GitHub del proyecto ${title}`}
   role="link"
   class="inline-flex items-center justify-center gap-2 px-3 py-2 text-base
   bg-white text-black border border-gray-300

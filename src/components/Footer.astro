@@ -35,12 +35,14 @@ const links = [
     <ul class="flex flex-row gap-x-4 text-black dark:text-white">
       {
         links.map((link) => (
-          <a
-            class="hover:text-[#27EEF5] opacity-80 dark:hover:text-[#27EEF5] transition-colors "
-            href={link.href}
-          >
-            {link.label}
-          </a>
+          <li class="list-none">
+            <a
+              class="hover:text-[#27EEF5] opacity-80 dark:hover:text-[#27EEF5] transition-colors "
+              href={link.href}
+            >
+              {link.label}
+            </a>
+          </li>
         ))
       }
     </ul>

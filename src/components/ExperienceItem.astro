@@ -22,14 +22,14 @@ const { title, company, description, link, date } = Astro.props;
     >
 
     <h3 class="text-xl font-bold important-color opacity-80">{title}</h3>
-    <h4 class="font-semibold text-xl dark:text-gray-400 text-gray-600">
+    <div class="font-semibold text-xl dark:text-gray-400 text-gray-600">
       {company}
-    </h4>
+    </div>
     <time class="p-0 m-0 text-sm dark:text-gray-400 text-gray-600">{date}</time>
   </div>
   <div
     class="relative flex flex-col gap-2 pb-4 text-sm dark:text-gray-400 text-gray-600 md:col-span-3"
   >
-    {description.map((item) => <p>⏺ {item}</p>)}
+    {description.map((item) => <p>{item}</p>)}
   </div>
 </div>
