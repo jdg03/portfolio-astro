@@ -17,11 +17,13 @@ const { title, company, description, link, date } = Astro.props;
 >
   <div class="relative pb-12 md:col-span-2">
     <span
-      class="important-color opacity-80 -left-[42px] absolute rounded-full text-5xl"
+      class="text-black dark:text-[#27EEF5] -left-[42px] absolute rounded-full text-5xl"
       >&bull;</span
     >
 
-    <h3 class="text-xl font-bold important-color opacity-80">{title}</h3>
+    <h3 class="text-xl font-bold text-black dark:text-[#27EEF5]">
+      {title}
+    </h3>
     <div class="font-semibold text-xl dark:text-gray-400 text-gray-600">
       {company}
     </div>
