@@ -56,14 +56,26 @@ export const projects = [
     is_active: false,
   },
   {
+    id: 7,
+    title: "E-commerce web",
+    image: "https://ucdtitavxeziqrjktxie.supabase.co/storage/v1/object/public/images-portfolio/projects/ecommerceMERN/imagen1.png",
+    description:
+      "Tienda viertual en linea que con una interfaz minimalista, busquedas eficientes y panel administrativo, pensado para agilizar el proceso de compra sobre todo aquellos negocios que no tienen tienda fisica y que quieren exponer sus catalogos de una forma más profesional",
+    github: "https://github.com/jdg03/ecommercce-MERN",
+    technologies: [TAGS.TypeScript, TAGS.REACT, TAGS.NODEJS, TAGS.Mongo],
+    link: "https://portfolio-jose-gonzalez.vercel.app/",
+    is_active: false,
+  },
+  {
     id: 6,
     title: "Portafolio con animaciones 3d",
     image: "/projects/porfolio.webp",
     description:
       "Portafolio web con animaciones 3d usando librerias como motion y three.js",
     github: "",
-    technologies: [TAGS.REACT, TAGS.TAILWIND],
+    technologies: [TAGS.REACT, TAGS.TAILWIND, TAGS.SUPABASE],
     link: "https://portfolio-jose-gonzalez.vercel.app/",
     is_active: true,
   },
+  
 ];

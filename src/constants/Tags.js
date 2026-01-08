@@ -65,4 +65,14 @@ export const TAGS = {
     class: "text-black dark:text-white",
     icon: "Net",
   },
+  TypeScript: {
+    name: "TypeScript",
+    class: "text-black dark:text-white",
+    icon: "TypeScript",
+  },
+  Mongo: {
+    name: "MongoDB",
+    class: "text-black dark:text-white",
+    icon: "MongoDB",
+  },
 };
